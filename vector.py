@@ -7,12 +7,11 @@ class Vector:
     plane-polar angle, and scalar product
     """
 
-    def __init__(self, x=0.0, y=0.0):
-        self.x = x
-        self.y = y
+    def __init__(self, *components):
+        self.components = components
 
     def __repr__(self):
-        return f'Vector({self.x}, {self.y})'
+        return f'Vector{components}'
 
     def __eq__(self, other):
         return (self.x == other.x) and (self.y == other.y)
